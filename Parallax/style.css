@@ -1,0 +1,81 @@
+body{
+    height:100%;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color:#666;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+
+.pimg-1, .pimg-2, .pimg-3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.pimg-1{
+    background-image: url('../Images/book1.jpg');
+    min-height: 700px;
+}
+
+.pimg-2{
+    background-image: url('../Images/book2.jpg');
+    min-height: 400px;
+}
+
+.pimg-3{
+    background-image: url('../Images/book3.jpg');
+    min-height: 400px;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color:#666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color:#ddd;
+}
+
+.ptext{
+    position: absolute;
+    top:50%;
+    width:100%;
+    text-align: center;
+    color:#000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.border{
+    background-color: #111;
+    color:white;
+    padding:20px;
+}
+
+.border:hover{
+    background-color: white;
+    color:#111;;
+}
+
+.trans{
+    color:white;
+}
+
+@media(max-width:568px){
+    .pimg-1, .pimg-2, .pimg-3{
+        background-attachment: scroll;
+    }
+}
