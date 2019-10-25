@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" type="text/CSS">
+</head>
+<body>
+    <div id="left">
+        <h4>1. What does HTML stands for?</h4>
+        <input type="radio" name="Q1" id="option1"/> Highlevel markup language <br>
+        <input type="radio" name="Q1" id="option2"/> Highlevel markdown language <br>
+        <input type="radio" name="Q1" id="option3"/> Hypertext markup language <br>
+        <input type="radio" name="Q1" id="option4"/> Hello markup language <br>
+
+        <h4>2. What does CSS stands for?</h4>
+        <input type="radio" name="Q2" id="option5"/> Course Code Stylesheet <br>
+        <input type="radio" name="Q2" id="option6"/> Cascading Stylesheet <br>
+        <input type="radio" name="Q2" id="option7"/> Complex Stylesheet <br>
+        <input type="radio" name="Q2" id="option8"/> Copycat Stylesheet <br>
+
+        <h4>3. What display property span elements have by default</h4>
+        <input type="radio" name="Q3" id="option9"/> block <br>
+        <input type="radio" name="Q3" id="option10"/> inline <br>
+        <input type="radio" name="Q3" id="option11"/> block-inline <br>
+        <input type="radio" name="Q3" id="option12"/> none <br>
+
+        <h4>4. Is java script is case sensitive</h4>
+        <input type="radio" name="Q4" id="option13"/> Yes <br>
+        <input type="radio" name="Q4" id="option14"/> No <br>
+
+        <div id="check">
+            <div id="ch1" style="margin-top: 80px;"></div>
+            <div id="ch2" style="margin-top: 80px;"></div>
+            <div id="ch3" style="margin-top: 100px;"></div>
+            <div id="ch4" style="margin-top: 80px;"></div>
+        </div>
+    </div>
+    <div id="right">
+        <h4>5. What does http stands for?</h4>
+        <input type="radio" name="Q5" id="option15"/> High text transfer protocol <br>
+        <input type="radio" name="Q5" id="option16"/> Hyper text type paragraph <br>
+        <input type="radio" name="Q5" id="option17"/> Hyper text transfer paragraph <br>
+        <input type="radio" name="Q5" id="option18"/> Hyper text transfer protocol <br><br>
+        <button id="submit" onclick="check_answer()">Submit</button>
+        <p id="score"></p>
+        <p id="percentage"></p>
+        <div id="check">
+            <div id="ch5" style="margin-top: 100px;"></div>  
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

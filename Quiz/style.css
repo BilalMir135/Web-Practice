@@ -1,0 +1,53 @@
+html,body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(238, 99, 35);
+}
+
+#left, #right{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(245, 154, 133);
+    position: absolute;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#left {  
+    left: 5%;
+}
+
+#right{
+    right: 5%;
+}
+
+button{
+    width: 90px;
+    height: 50px;
+    background: #00A14E;
+    border-radius: 8px;
+    border: none;
+    color: #fff; 
+}
+
+button:hover{
+    background: #6ADB11;
+}
+
+#check{
+    width: 100px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+#check div{
+    width: 100px;
+    height: 50px;
+}
+
+#percentage{
+    font-size: 30px;
+}
