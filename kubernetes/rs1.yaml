@@ -5,8 +5,11 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels:
-      app: rsexample
+    matchExpressions:
+    - key: app
+      operator: In
+      values:
+      - rsexample
   template:
     metadata:
       labels:
@@ -17,4 +20,3 @@ spec:
         image: aamirpinger/helloworld:latest
         ports:
         - containerPort: 80
-

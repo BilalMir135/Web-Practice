@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: lp-pod
+spec:
+  containers:
+  - name: container1
+    image: aamirpinger/hi:latest
+    ports:
+    - containerPort: 80
+    livenessProbe:
+      exec:
+        command:
+        - ls
