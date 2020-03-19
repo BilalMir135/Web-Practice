@@ -1,0 +1,19 @@
+kind: ReplicaSet
+apiVersion: apps/v1beta2
+metadata:
+  name: myrs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rsexample
+  template:
+    metadata:
+      labels:
+        app: rsexample
+    spec:
+      containers:
+      - name: rscontainer
+        image: aamirpinger/helloworld:latest
+        ports:
+        - containerPort: 80

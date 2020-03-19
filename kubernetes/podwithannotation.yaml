@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: podwithnotation
+  annotations:
+    createdBy: "Bilal Mir"
+    email: bilalmir135@gmail.com
+spec:
+  containers:
+  - name: container1
+    image: aamirpinger/flag:latest
+    ports:
+    - containerPort: 80
