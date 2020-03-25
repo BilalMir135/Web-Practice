@@ -1,0 +1,43 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: my-app-deploy
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: myapp-frontend
+  template:
+    metadata:
+      labels:
+        app: myapp-frontend
+    spec:
+      volumes:
+      - name: myapp-pvol
+        persistentVolumeClaim:
+          claimName: myapp-pvc
+      containers:
+      - name: container-one
+        image: bilalmir135/myapp:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: myapp-pvol
+          mountPath: /data
+        livenessProbe:
+          httpGet:
+            port: 80
+            path: /
+          failureThreshold: 2
+          periodSeconds: 15
+          initialDelaySeconds: 20
+        readinessProbe:
+          httpGet:
+            port: 80
+            path: /
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
