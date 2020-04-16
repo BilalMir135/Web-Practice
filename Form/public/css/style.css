@@ -1,0 +1,266 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: linear-gradient(330deg, #8cc63f 50%, #fff 0%);
+  z-index: -1;
+}
+
+/************************* Header Starts *************************/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text {
+  animation-name: logo-animate;
+  animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: logo-animate;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: logo-animate;
+  position: relative;
+  max-width: 50%;
+  height: auto;
+}
+
+.logo {
+  animation-name: rotate;
+  animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -moz-animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: rotate;
+  max-width: 20%;
+  height: auto;
+}
+
+@keyframes logo-animate {
+  0% {
+    opacity: 0;
+    right: 50px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/************************* Header Ends *************************/
+
+/************************* Form Starts *************************/
+.form-heading h2 {
+  text-align: center;
+  margin: 10px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: #8cc63f;
+}
+
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  width: 100%;
+  max-width: 800px;
+}
+
+section form {
+  width: 100%;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.form-section label {
+  font-size: 14px;
+  width: 200px;
+  color: #000;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
+p {
+  font-size: 12px;
+  float: right;
+  margin-top: 2px;
+  color: #757575;
+}
+
+.form-section input[type='text'],
+.form-section input[type='email'],
+.form-section textarea {
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-select,
+.form-radio-check {
+  width: 100%;
+}
+
+.form-select select {
+  width: 20%;
+  font-size: 15px;
+  padding: 8px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  outline: none;
+}
+
+.form-section input[type='text']:focus,
+.form-section input[type='email']:focus,
+.form-section textarea:focus,
+.form-section select:focus {
+  border-color: #4b790f;
+  box-shadow: 0 0 10px #4b790f;
+  outline: none;
+}
+
+.form-radio-check label {
+  font-size: 15px;
+}
+
+.form-radio-check input[type='radio'],
+.form-radio-check input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+}
+
+.form-radio-check input[type='text'] {
+  width: 29%;
+}
+
+.form-section table {
+  width: 100%;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.form-section table tr {
+  text-align: start;
+}
+
+.last-row {
+  text-align: center;
+}
+
+.form-buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.form-buttons input {
+  font-size: 20px;
+  font-weight: 800;
+  padding: 8px 10px;
+  margin: 0 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  border-radius: 100px;
+  width: 30%;
+  height: 50px;
+}
+
+.form-buttons input:hover,
+.form-buttons input:active {
+  background: #fff;
+  color: #8cc63f;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.form-buttons input:focus {
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  .form-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-section label {
+    margin-bottom: 10px;
+  }
+  .hobbies {
+    display: block;
+  }
+
+  /*responsive table*/
+  table th {
+    display: none;
+  }
+
+  table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #757575;
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table td:last-child {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #757575;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    color: #000;
+    padding-left: 15px;
+    font-size: 15px;
+    text-align: left;
+  }
+  table tr:last-child,
+  table td:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .hobbies input[type='checkbox'] {
+    margin-right: 15px;
+  }
+
+  .form-select select {
+    width: 30%;
+  }
+}
