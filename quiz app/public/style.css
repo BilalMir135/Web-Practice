@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.quiz-app {
+  padding: 5px 0;
+  min-height: 95vh;
+}
+
+.quiz-app #quiz {
+  margin: 0 10px;
+  display: none;
+}
+
+.quiz-app .title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4rem;
+  color: #605c7f;
+  text-align: center;
+}
+
+.quiz-app .quiz-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  align-items: center;
+  padding: 0 20px;
+  margin: 10px 0;
+}
+.quiz-app .quiz-info p {
+  margin: 0;
+}
+
+.quiz-app .quiz-info .timer {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.quiz-app .question,
+#result {
+  font-size: 20px;
+  background-color: #fff;
+  color: #555;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-app .options {
+  margin: 20px 0;
+}
+
+.quiz-app .options div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  color: #555;
+  cursor: pointer;
+}
+
+.quiz-app .quiz-btn {
+  text-align: end;
+}
+
+.quiz-app .quiz-btn button,
+.quiz-app #start-quiz button {
+  background-color: #605c7f;
+  color: #fff;
+  padding: 5px 30px;
+  font-size: 18px;
+}
+
+.quiz-app .quiz-btn button:hover,
+.quiz-app #start-quiz button:hover {
+  background-color: #48455f;
+}
+
+.quiz-app .quiz-btn button:focus,
+.quiz-app #start-quiz button:focus {
+  box-shadow: none;
+}
+
+.quiz-app #start-quiz {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-app #start-quiz button {
+  border-radius: 100px;
+}
+
+.quiz-app #result {
+  display: none;
+  margin: 20px 10px;
+}
+
+.quiz-app #result h4 {
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.quiz-app #result p {
+  margin: 0;
+}
+
+.quiz-app #result #percentage {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+footer {
+  text-align: center;
+  color: #48455f;
+  font-weight: bolder;
+}

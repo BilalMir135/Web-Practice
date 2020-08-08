@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./icon.png" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="container quiz-app">
+      <h1 class="title">QUIZ APP</h1>
+
+      <div id="start-quiz">
+        <button class="btn">Start Quiz</button>
+      </div>
+
+      <div id="quiz">
+        <div class="quiz-info">
+          <p id="question-num">Question 1 of 5</p>
+        </div>
+        <div class="question"></div>
+        <div class="options"></div>
+        <div class="quiz-btn">
+          <button class="btn" id="next">Next</button>
+        </div>
+      </div>
+
+      <div id="result">
+        <h4>Your Result</h4>
+        <p id="correct"></p>
+        <p id="wrong"></p>
+        <p id="percentage"></p>
+      </div>
+    </div>
+
+    <footer>Designed & Developed by Bilal Mir</footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
