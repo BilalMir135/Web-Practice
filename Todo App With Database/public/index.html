@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyBLRnhslt6Rin01gYE7AaYYYIC55NGfK1c',
+        authDomain: 'todo-app-with-database-cfc18.firebaseapp.com',
+        databaseURL: 'https://todo-app-with-database-cfc18.firebaseio.com',
+        projectId: 'todo-app-with-database-cfc18',
+        storageBucket: 'todo-app-with-database-cfc18.appspot.com',
+        messagingSenderId: '260795262745',
+        appId: '1:260795262745:web:20967e05092d251d520788',
+        measurementId: 'G-429MXB1FBN',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/tick.png" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1>TO<span>DO</span></h1>
+        <div class="input-field">
+          <input id="task" type="text" />
+          <label for="task">Task</label>
+        </div>
+        <a class="waves-effect waves-light btn" id="addTask">ADD</a>
+        <ul></ul>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright © Bilal Mir 2020</p>
+    </footer>
+    <!--Materialize JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
